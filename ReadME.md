@@ -104,7 +104,7 @@ This will print three result sets to the terminal:
     Any subsequent success on the same order is treated as a duplicate retry and excluded.
     Amount is converted from cents to dollars by dividing by 100.0 
 
- - **-- QUERY 2: Orphan Payments**
+ - **QUERY 2: Orphan Payments**
    Payments that succeeded but have no associated order.
    These represent money received with no matching order record and must be investigated separately by Finance.
 
@@ -124,4 +124,5 @@ This will print three result sets to the terminal:
   
    ***Gap = Internal Total - Bank Total***
    A positive gap means we expected more than the bank settled.
+
    A negative gap means the bank settled more than we recorded internally.
