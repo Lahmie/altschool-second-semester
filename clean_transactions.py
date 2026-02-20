@@ -91,7 +91,7 @@ def mongo_archive(raw_data, connection_string):
 def main():
     raw_data = read_data(input("Enter the path to the input JSONL file: "))
     #refer to Readme.MD for instructions on how to get the MongoDB connection string
-    # mongo_archive(raw_data, input("Enter your MongoDB connection string: "))
+    mongo_archive(raw_data, input("Enter your MongoDB connection string: "))
     extracted_data = extract_fields(raw_data)
     cleaned_data = []
     for record in extracted_data:
@@ -102,4 +102,5 @@ def main():
     write_data(cleaned_data, output_path)
 
 if __name__ == "__main__":
+
     main()
